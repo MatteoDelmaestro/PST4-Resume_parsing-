@@ -1,0 +1,33 @@
+function [tx2] = median(tx)
+[dim, taille] = size(tx);
+
+
+
+for index = 1:taille
+   
+   if index < 2 
+        
+       A = [ tx(index) tx(index+1) tx(index+2)];
+        tx2(index) = median(A);
+       
+        disp(tx2
+   
+   elseif index > taille - 2
+       
+       A = [tx(index-2) tx(index-1) tx(index)];
+        tx2(index) = median(A);
+       
+       
+   
+   
+   else
+        A = [tx(index-2) tx(index-1) tx(index) tx(index+1) tx(index+2)];
+        tx2(index) = median(A);
+   end
+    
+end
+
+
+
+
+return 
